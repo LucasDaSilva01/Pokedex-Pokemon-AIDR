@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+</head>
+
+<body>
+
+  <!-- menu de navegação-->
+  <nav>
+
+    <!-- definimos nossa logo-->
+    <img class="logo" [src]="logo" alt="logo da pokedex">
+
+    <!-- Definir uma lista de menu-->
+    <ul>
+      <!-- percorrer a lista que se encontra em app.component.ts-->
+      <!--quando encontrado o valor Pokedex dessa lista, atribuimos uma classe especial-->
+      <li *ngFor="let link of links" [ngClass]="{'link_selecionado': link == 'Pokedex'}">{{link}} </li>
+    </ul>
+
+    <!-- definir nossa imagem de perfil-->
+    <img class="imgProfile" src={{imgProfile}} alt="imagem de perfil">
+  
+  </nav>
+
+</body>
+
+</html>
